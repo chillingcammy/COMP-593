@@ -1,0 +1,26 @@
+WORK LOG:
+
+April 18th: 30 minutes
+-Investigated NASA API
+-Looked into old labs whose code I could repurpose 
+-Checked out Google results for "How to use NASA API python"
+-Checked out Google results for "How to run a python script inside a powershell script (felt dumb googling this, kinda knew the answer but felt a little overwhelmed)
+
+
+
+April 24th: 11:00am -12:30pm,  1:00pm - 4:00PM, 6:30-~9:30 (last session was kinda distracted)      7.5 Hours (5.0 solid focused hours)
+-Generated an API key
+-Set up script to check to see if C:\temp\NASA exists.
+-Imported required modules, installed nasapy with pip
+-Went on an adventure downloading packages that require each other. I'm not certain you want us to use the "nasapy" library but the instructions I found at
+"https://www.educative.io/blog/how-to-use-api-nasa-daily-image" used it. Might scrap all this but throwing stuff at a wall and seeing what sticks.
+-Looked into the example that I have here ^ they used a bunch of libraries I don't need. Still a really nice framework to go off of.
+-Realised that today's image of the day is a video. Swapped my "Current_Date" variable to a date that has a picture.
+-Decided I would use HD if avaliable otherwise I'd use the normal resolution image.
+-Discussed nasapy library with other students and Joe. I've decided to use it today, get the script done and then go back and do it the real way if I have time.
+-At 5:00 PM my script can download an image, calculate file size, make a hash of the contents of the file (opens and closes) and calculate the filesize in Kilobytes. 
+-The filename system and a means to make a cache folder if it doesn't exist works too. Outputs are cleaned up (rounded, spaced nicely) and put into an array.
+-Although the outline suggests using the hash value to checking the cache before downloading, I'm going to add another table to the database that uses just the date. This is the 
+value that the script will check to see if the image has been downloaded before running the nasapy part. Starting to hate myself for taking the easy way out, going to try and clean
+this up later.
+-P

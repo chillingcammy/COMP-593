@@ -30,7 +30,7 @@ April 27th: 7:00 pm - 8:00 pm  (1 hour)
 -Realised my cache wasn't working as well as I thought it was. Spent some time troubleshooting and realised I forgot to add connection.commit() to a couple lines.
 -Starting setting up the regex and related logic to check db for todays date and make sure the image doesn't already exist. 
 
-April 28th 8:00 am - 10:00 am, 10:30am - 12:00 pm,
+April 28th 8:00 am - 10:00 am, 10:30am - 12:00 pm, 12:30-2:00 pm     (5 hours)
 
 -Finished the regex lines. The script makes a list of dates that exist in the db, makes a regex search string equal to todays date and if the regex search evaluates to TRUE
 then the Image_Grabber subroutine runs. Another regex searches for " Date.* " and if that regex evaulates to TRUE the Active_Image is set to that filepath. 
@@ -42,4 +42,7 @@ string of the filepath.
 where it works. My mistake was cleaning up code (sometimes I used raw strings and other times I used escape sequences, I must have made a mistake while cleaning this up. 
 If its not broken, not going to fix it.)
 -Realised there is a world of difference between re.match and re.search
+-Need to implement the output that appears in the powershell terminal. 
+-Frusterated by background sometimes updating and sometimes not. Bah.
+-In the end, my script works but I wish I had done more. 
 

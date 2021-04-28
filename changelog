@@ -23,4 +23,23 @@ April 24th: 11:00am -12:30pm,  1:00pm - 4:00PM, 6:30-~9:30 (last session was kin
 -Although the outline suggests using the hash value to checking the cache before downloading, I'm going to add another table to the database that uses just the date. This is the 
 value that the script will check to see if the image has been downloaded before running the nasapy part. Starting to hate myself for taking the easy way out, going to try and clean
 this up later.
--P
+
+
+April 27th: 7:00 pm - 8:00 pm  (1 hour)
+-I didn't save my change log last night, nuts. Adding this in the morning.
+-Realised my cache wasn't working as well as I thought it was. Spent some time troubleshooting and realised I forgot to add connection.commit() to a couple lines.
+-Starting setting up the regex and related logic to check db for todays date and make sure the image doesn't already exist. 
+
+April 28th 8:00 am - 10:00 am, 10:30am - 12:00 pm,
+
+-Finished the regex lines. The script makes a list of dates that exist in the db, makes a regex search string equal to todays date and if the regex search evaluates to TRUE
+then the Image_Grabber subroutine runs. Another regex searches for " Date.* " and if that regex evaulates to TRUE the Active_Image is set to that filepath. 
+-Finally, I needed a way to get the value of this variable into PowerShell. I opted to output it to a file that gets deleted before each new interation that contains just the 
+string of the filepath. 
+-That's the python stuff done!
+-The powershell stuff is a cinch, only 4 lines! Python runs the Lab_X.py script and the text file "Active_Image.txt" is created. $Active_Image uses Get-Content to read this string.
+-I regret jinxing myself with that previous statement. Suddenly my variable isn't defined, I have my logic set up poorly. Troubleshooting by CTRL-Z'ing until I return to a place
+where it works. My mistake was cleaning up code (sometimes I used raw strings and other times I used escape sequences, I must have made a mistake while cleaning this up. 
+If its not broken, not going to fix it.)
+-Realised there is a world of difference between re.match and re.search
+
